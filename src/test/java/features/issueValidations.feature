@@ -45,17 +45,3 @@ Scenario Outline: Verify delete issue functionality is working
 Examples:
 	|summary 	 		|description 			|
 	|summary_test |description_test |
-
-#@UpdateComment @Regression
-#Scenario Outline: Verify update comment functionality is working
-#	Given Created session with issue Payload as "<summary>" "<description>"
-#	When user calls "createIssueAPI" with "POST" http request
-#	Then user calls "addCommentAPI" with new payload as "<comment>" and "POST" http request
-#	Then the API call got success with status code "201"
-#	Then user updating comment calling "updateCommentAPI" with payload as "<updateComment>" and "POST" http request
-#	Then the API call got success with status code "200"
-#	
-#Examples:
-#	|summary 	 		|description 			|comment 	 						|updateComment 									|
-#	|summary_test |description_test |comment_test444444444|Updating existing comment auto |
-	

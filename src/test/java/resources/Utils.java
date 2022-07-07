@@ -31,7 +31,6 @@ public class Utils {
 		return req;
 		}
 		return req;
-
 	}
 	
 	public static String getGlobalValue(String key) throws IOException
@@ -47,5 +46,11 @@ public class Utils {
 		   String resp = response.asString();
 		   JsonPath js = new JsonPath(resp);
 		   return js.get(key).toString();
+	}
+	
+	public static JsonPath rowToJson(String response) {
+		
+		JsonPath js = new JsonPath(response);
+		return js;
 	}
 }

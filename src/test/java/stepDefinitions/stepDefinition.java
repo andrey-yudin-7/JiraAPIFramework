@@ -32,9 +32,7 @@ public class stepDefinition extends Utils{
 	
 	@Given("Created session with issue Payload as {string} {string}")
 	public void created_session_with_issue_payload_as(String summary, String description) throws IOException {
-
 		APIResources resourceAPI = APIResources.valueOf("createSessionAPI");
-
 		String adminLogin = getGlobalValue("adminLogin");
 		String adminPassword = getGlobalValue("adminPassword");
 		String projectKey = getGlobalValue("projectKey");
@@ -50,10 +48,8 @@ public class stepDefinition extends Utils{
 	}
 	@When("user calls {string} with {string} http request")
 	public void user_calls_with_http_request(String resource, String method) {
-
 		APIResources resourceAPI = APIResources.valueOf(resource);
 		resourceAPI.getResource();
-		
 		resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
 		
 		if(method.equalsIgnoreCase("POST"))
@@ -63,14 +59,12 @@ public class stepDefinition extends Utils{
 	}
 	@Then("the API call got success with status code {string}")
 	public void the_api_call_got_success_with_status_code(String code) {
-
 	    assertEquals(response.getStatusCode(), Integer.parseInt(code));
 		//get issue id
 		issueId = getJsonPath(response, "id");
 	}
 	@Then("user calls {string} with payload as {string} and {string} http request")
 	public void user_calls_with_payload_as_and_http_request(String resource, String comment, String method) throws IOException {
-
 		APIPathResources resourcePathAPI =  new APIPathResources();
 
 		reqspec = given().spec(requestSpecification()).body(data.AddCommentPayload(comment)).filter(session);
@@ -85,7 +79,6 @@ public class stepDefinition extends Utils{
 	@Then("user updating comment calling {string} with payload as {string} and {string} http request")
 	public void user_updating_comment_calling_with_payload_as_and_http_request(String resource, String comment, String method) throws IOException {
 		APIPathResources resourcePathAPI =  new APIPathResources();
-		
 		reqspec = given().spec(requestSpecification()).body(data.UpdateCommentPayload(comment)).filter(session);
 		
 		if(method.equalsIgnoreCase("POST"))
@@ -95,9 +88,7 @@ public class stepDefinition extends Utils{
 	}
 	@Then("user calls {string} with adding file and {string} http request")
 	public void user_calls_with_adding_file_and_http_request(String resource, String method) throws IOException {
-
 		APIPathResources resourcePathAPI =  new APIPathResources();
-		
 		reqspec = given().spec(requestSpecification()).header("X-Atlassian-Token","no-check").header("Content-Type","multipart/form-data").filter(session)
 		.multiPart("file", new File(System.getProperty("user.dir")+"\\src\\test\\resources\\jira.txt"));
 		
@@ -108,7 +99,6 @@ public class stepDefinition extends Utils{
 	}
 	@Then("user delete the issue by calling {string} with {string} http request")
 	public void user_delete_the_issue_by_calling_with_http_request(String resource, String method) throws IOException {
-	    // Write code here that turns the phrase above into concrete actions
 		APIPathResources resourceDynamicAPI =  new APIPathResources();
 		
 		given().spec(requestSpecification()).filter(session)
