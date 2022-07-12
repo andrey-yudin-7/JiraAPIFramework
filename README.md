@@ -90,7 +90,7 @@ Scenario Outline: Verify if issue is being Succesfully created using createIssue
 	Then the API call got success with status code "201"
 
 Examples:
-	|summary 	  |description 		|
+	|summary 	 		|description 			|
 	|summary_test |description_test |
 
 @AddComment @Regression
@@ -102,8 +102,8 @@ Scenario Outline: Verify add comment functionality is working
 	Then the API call got success with status code "201"
 	
 Examples:
-	|summary 	 		|description 	  |comment 	    |
-	|summary_test       |description_test |comment_test |
+	|summary 	 		|description 			|comment 	 		|
+	|summary_test |description_test |comment_test |
 	
 @AddAttachment @Regression
 Scenario Outline: Verify add attachment functionality is working
@@ -114,8 +114,8 @@ Scenario Outline: Verify add attachment functionality is working
 	Then the API call got success with status code "200"
 	
 Examples:
-	|summary 	    |description 	   |
-	|summary_test   |description_test  |
+	|summary 	 		|description 			|
+	|summary_test |description_test |
 	
 @DeleteIssue @Smoke
 Scenario Outline: Verify delete issue functionality is working
@@ -126,7 +126,7 @@ Scenario Outline: Verify delete issue functionality is working
 	Then the API call got success with status code "201"
 
 Examples:
-	|summary 	  |description 	    |
+	|summary 	 		|description 			|
 	|summary_test |description_test |
 ```
 part of _StepDefinition.java_ (from src\test\java\stepDefinitions\ folder):
@@ -178,7 +178,7 @@ Scenario Outline: Verify if issue is being Succesfully created using createIssue
 	Then the API call got success with status code "201"
 
 Examples:
-	|summary 	  |description 		|
+	|summary 	 		|description 			|
 	|summary_test |description_test |
 ```
 
@@ -259,7 +259,7 @@ Scenario Outline: Verify if issue is being Succesfully created using createIssue
 	Then the API call got success with status code "201"
 
 Examples:
-	|summary 	  |description 		|
+	|summary 	 		|description 			|
 	|summary_test |description_test |
 ```
 <a id="enum"></a>
@@ -299,8 +299,8 @@ Scenario Outline: Verify add comment functionality is working
 	Then the API call got success with status code "201"
 	
 Examples:
-	|summary 	 		|description 	  |comment 	    |
-	|summary_test       |description_test |comment_test |
+	|summary 	 		|description 			|comment 	 		|
+	|summary_test |description_test |comment_test |
 ```
 also to get payload data for API requests created a separate class _TestDataBuild.java_:
 ```
