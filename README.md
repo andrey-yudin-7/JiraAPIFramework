@@ -11,7 +11,6 @@
 - [Data driven from feature files, external data files](#datadriven)
 - [Extent Reports](#reports)
 - [Logs](#logs)
-- [OOPS concepts achieved](#oops)
 
 <a id="description"></a>
 ## __1. Project description__
@@ -375,4 +374,3 @@ from _Utils.java_
 ```
 
 Logs are stored in \src\logs folder.
-
