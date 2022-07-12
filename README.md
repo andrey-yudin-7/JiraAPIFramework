@@ -90,7 +90,7 @@ Scenario Outline: Verify if issue is being Succesfully created using createIssue
 	Then the API call got success with status code "201"
 
 Examples:
-	|summary 	  |description 		|
+	|summary      |description      |
 	|summary_test |description_test |
 
 @AddComment @Regression
