@@ -165,7 +165,7 @@ part of _StepDefinition.java_ (from src\test\java\stepDefinitions\ folder):
     ............
 ```
 <a id="parametrizing"></a>
-## __3.2 Parametrizing with data sets, driving all global variables from global properties file__
+### __3.2 Parametrizing with data sets, driving all global variables from global properties file__
 
 Implemented parametrizing to run tests with multiple data sets using Cucumber Example Keyword:
 
