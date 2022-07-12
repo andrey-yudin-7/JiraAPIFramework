@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
                 "json:target/cucumber-reports/",
                 "html:target/cucumber-reports.html"},
 		glue={"stepDefinitions"}
-//		tags= "@DeleteIssue"  
+//		tags= "@Smoke"  
 		)
 
 public class TestRunner {

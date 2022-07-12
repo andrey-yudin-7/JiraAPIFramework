@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: cucumber.Options.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 8, Errors: 0, Skipped: 6, Time elapsed: 3.001 sec <<< FAILURE!
+the API call got success with status code "201"(Verify if issue is being Succesfully created using createIssueAPI)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:7)
+
+Verify if issue is being Succesfully created using createIssueAPI  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:7)
+
+the API call got success with status code "201"(Verify add comment functionality is working)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:17)
+
+Verify add comment functionality is working  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:17)
+
+the API call got success with status code "201"(Verify add attachment functionality is working)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:29)
+
+Verify add attachment functionality is working  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:29)
+
+the API call got success with status code "201"(Verify delete issue functionality is working)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:41)
+
+Verify delete issue functionality is working  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<403> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.stepDefinition.the_api_call_got_success_with_status_code(stepDefinition.java:62)
+	at ?.the API call got success with status code "201"(file:///D:/QA_projects/Git/JiraApiFramework/JiraAPIFramework/src/test/java/features/issueValidations.feature:41)
+
