@@ -44,7 +44,7 @@ you can start or stop jira server on running start_service.bat or stop_service.b
 
 Clone this project and import it from the file system using IDE (as Eclipse IDE).
 
-Then you'll need to update global.properties file in the project (located in src\test\java\resources\) with your data for adminLogin, adminPassword, projectKey:
+Then you'll need to update [_global.properties_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/global.properties) file in the project (located in src\test\java\resources\) with your data for adminLogin, adminPassword, projectKey:
 ```
 baseUrl=http://localhost:8080/
 adminLogin=
@@ -52,7 +52,7 @@ adminPassword=
 projectKey=
 ```
 
-Run this project As Junit Test for junitCucumber.xml file (in root folder) or for _TestRunner.java_ (in src\test\java\cucumber\Options folder) file:
+Run this project As Junit Test for [_junitCucumber.xml_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/junitCucumber.xml) file (in root folder) or for [_TestRunner.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/cucumber/Options/TestRunner.java) (in src\test\java\cucumber\Options folder) file:
 
 <img src="src\test\resources\readme_images\run1.png" width="500">
 
@@ -77,7 +77,7 @@ $ mvn test -Dcucumber.filter.tags="@Smoke"
 BDD concepts with Cucumber framework implemented using feature files (with test cases), Step definitions files (with supported code) and TestRunner (class for running tests).
 
 Feature File is an entry point to the Cucumber tests and cucumber proposes to write test scenario in the Given/When/Then/And format.  
-Example of the feature file used in this API framework - _issueValidations.feature_ (from src\test\java\features forlder):
+Example of the feature file used in this API framework - [_issueValidations.feature_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/features/issueValidations.feature) (from src\test\java\features forlder):
 
 ```
 Feature: Validating Issue API's
@@ -128,7 +128,7 @@ Examples:
 	|summary      |description      |
 	|summary_test |description_test |
 ```
-part of _StepDefinition.java_ (from src\test\java\stepDefinitions\ folder):
+part of [_StepDefinition.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/stepDefinitions/stepDefinition.java) (from src\test\java\stepDefinitions\ folder):
 
 ```
 	.............
@@ -181,7 +181,7 @@ Examples:
 	|summary_test |description_test |
 ```
 
-Implemented driving all global variables from _global.properties_ file:
+Implemented driving all global variables from [_global.properties_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/global.properties) file:
 
 ```
 baseUrl=http://localhost:8080/
@@ -189,7 +189,7 @@ adminLogin=
 adminPassword=
 projectKey=
 ```
-supported getGlobalValue() method from _Utils.java_:
+supported getGlobalValue() method from [_Utils.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/Utils.java):
 ```
 	public static String getGlobalValue(String key) throws IOException
 	{
@@ -202,7 +202,7 @@ supported getGlobalValue() method from _Utils.java_:
 <a id="methods"></a>
 ### __3.3 Reusable methods__
 
-Created _Utilities.java class_ in resources folder to define all reusable requests and response specifications - as _requestSpecification()_, _getGlobalValue()_, _getJsonPath()_, _rowToJson()_:
+Created [_Utils.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/Utils.java) class in resources folder to define all reusable requests and response specifications - as _requestSpecification()_, _getGlobalValue()_, _getJsonPath()_, _rowToJson()_:
 ```
 public class Utils {
 	
@@ -265,7 +265,7 @@ Examples:
 ### __3.5 Enum class with constants__
 Created Enum class that represents a group of constants to centralize API resources details.
 
-from _APIPathResources.java_:
+from [_APIResources.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/APIResources.java) :
 ```
 public enum APIResources {
 	createSessionAPI("/rest/auth/1/session"),
@@ -287,7 +287,7 @@ public enum APIResources {
 <a id="datadriven"></a>
 ### __3.6 Data driven from feature files, external data files__
 Implemented Data driven mechanism to drive data dinamically from Feature files - 
-as from _issueValidations.feature_ file (from src\test\java\features forlder) where we are driven data from Examples for summary, description, comment:
+as from [_issueValidations.feature_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/features/issueValidations.feature) file (from src\test\java\features folder) where we are driven data from Examples for summary, description, comment:
 ```
 @AddComment @Regression
 Scenario Outline: Verify add comment functionality is working
@@ -301,7 +301,7 @@ Examples:
 	|summary      |description      |comment      |
 	|summary_test |description_test |comment_test |
 ```
-also to get payload data for API requests created a separate class _TestDataBuild.java_:
+also to get payload data for API requests created a separate class [_TestDataBuild.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/TestDataBuild.java):
 ```
 	......
 	public String CreateSessionPayload(String username, String password)
@@ -334,7 +334,7 @@ also to get payload data for API requests created a separate class _TestDataBuil
 ```
 
 
-which is used in _StepDefinition.java_ (with supported code for feature file):
+which is used in [_StepDefinition.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/stepDefinitions/stepDefinition.java) (with supported code for feature file):
 ```
 		given().spec(requestSpecification()).body(data.CreateSessionPayload(adminLogin, adminPassword)).filter(session)
 		.when().post(resourceAPI.getResource())
@@ -342,7 +342,7 @@ which is used in _StepDefinition.java_ (with supported code for feature file):
 ```
 <a id="reports"></a>
 ### __3.7 Extent Reports__
-Reports are generating using Extent Reports and Extentreports adapter dependencies defined in _pom.xml_, Reports configs are defined in _extent.properties, spark-config.xml_ files. Generated 2 types of reports - with html and pdf formats.
+Reports are generating using Extent Reports and Extentreports adapter dependencies defined in _pom.xml_ [_pom.xml_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/pom.xml), Reports configs are defined in _extent.properties, spark-config.xml_ files. Generated 2 types of reports - with html and pdf formats.
 
 <img src="src\test\resources\readme_images\reports1.png">
 
@@ -355,7 +355,7 @@ Reports are generating using Extent Reports and Extentreports adapter dependenci
 <a id="logs"></a>
 ### __3.8 Logs__
 Logging mechanisme implemented using PrintStream class in requestSpecification() method. 
-from _Utils.java_
+from [_Utils.java_](https://github.com/andrey-yudin-7/JiraAPIFramework/blob/master/src/test/java/resources/Utils.java):
 ```
 	public RequestSpecification requestSpecification() throws IOException
 	{
